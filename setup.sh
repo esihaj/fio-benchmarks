@@ -4,6 +4,11 @@ set -xe
 sudo apt update
 sudo apt -y install gcc g++ make htop cmake curl zsh git nvme-cli libaio-dev sysstat tmux libnuma-dev
 
+mkdir results
+
+#SPDK
+git clone https://github.com/spdk/spdk.git
+
 # FIO
 git clone https://github.com/axboe/fio.git
 cd fio
