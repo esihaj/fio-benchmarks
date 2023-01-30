@@ -18,11 +18,6 @@ numjobs=8
 group_reporting=0 
 loops=1
 
-ioengine=io_uring 
-fixedbufs=1 
-registerfiles=1 
-sqthread_poll=1   
-
 direct=1 
 verify=0 
 randrepeat=0 
