@@ -1,6 +1,6 @@
 [global]
 ioengine=spdk_bdev
-spdk_json_conf=/tmp/bdev.conf
+spdk_json_conf=bdev.conf
 
 
 name=read4k
