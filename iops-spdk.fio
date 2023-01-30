@@ -5,8 +5,8 @@ spdk_json_conf=bdev.conf
 
 name=read4k
 log_avg_msec=50
-write_iops_log=4k-8.iops.log
-write_lat_log=4k-8.lat.log
+write_iops_log=result/iops.log
+write_lat_log=result/lat.log
 
 filesize=3800G
 bs=4K 
