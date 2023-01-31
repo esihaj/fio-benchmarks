@@ -2,7 +2,7 @@
 set -xe
 
 sudo apt update
-sudo apt -y install gcc g++ make htop cmake curl zsh git nvme-cli libaio-dev sysstat tmux libnuma-dev
+sudo apt -y install gcc g++ make htop cmake curl zsh git nvme-cli libaio-dev sysstat tmux libnuma-dev iotop
 
 mkdir results
 
