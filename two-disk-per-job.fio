@@ -6,7 +6,7 @@ write_lat_log=result/lat.log
 filesize=3800G
 bs=4K 
 iodepth=${DEPTH}
-rw=randread 
+rw=${JOB_TYPE} 
 thread=1 
 numjobs=${JOBS}
 

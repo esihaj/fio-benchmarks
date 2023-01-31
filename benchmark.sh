@@ -15,6 +15,7 @@ mkdir $SUMMARY $RESULT $ARCHIVE || true
 run_benchmark() {
         export DEPTH=$1
         export IOPS=$2
+        export JOB_TYPE= $3
         export JOBS
         printf "depth=$DEPTH, IOPS=$IOPS, JOBS=$JOBS ...    "
         TEST_NAME="d-$DEPTH-iops-$IOPS"
@@ -27,12 +28,13 @@ run_benchmark() {
         sleep 10s
 }
 
-run_benchmark 512 0
+run_benchmark 512 0 randread
+cat "$SUMMARY/$TEST_NAME.txt"
 exit 1
 
 for DEPTH in 1 2 4 8 16 32 64 128 192 256 512
 do
-    run_benchmark $DEPTH 0
+    run_benchmark $DEPTH 0 randread
 done
 
 mv $SUMMARY depth-summary
@@ -40,5 +42,5 @@ mkdir -p $SUMMARY $ARCHIVE
 
 for IOPS in 100000 200000 300000 400000 500000 600000 800000 800000 810000 820000 830000 840000 850000 860000 870000 890000 900000 0
 do
-    run_benchmark 128 $IOPS
+    run_benchmark 128 $IOPS randread
 done
